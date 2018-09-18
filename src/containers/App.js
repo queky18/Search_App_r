@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundry from '../components/ErrorBoundry'
 import './App.css';
 
 // State - the description of your app - an object that describe your application
@@ -40,7 +41,9 @@ class App extends Component {
                 <h1 className="f2">Search Friends</h1>
                 <SearchBox searchChange = { this.onSearchChange }/>
                 <Scroll>
-                    <CardList robots={filteredRobots}/>
+                    <ErrorBoundry>
+                        <CardList robots={ filteredRobots }/>
+                    </ErrorBoundry>
                 </Scroll>
             </div>
     }
