@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry'
 import './App.css';
+
+import { setSearchField } from '../actions';
 
 // State - the description of your app - an object that describe your application
 // State is able to change
