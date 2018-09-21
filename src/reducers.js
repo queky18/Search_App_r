@@ -10,6 +10,7 @@ const initialStateSearch = {
     searchField : ''
 }
 
+
 export const searchRobots = (state = initialStateSearch, action={}) => {
     console.log(action.type);
     switch( action.type ) {
